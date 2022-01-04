@@ -1,0 +1,217 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7120,        209]
+NotebookOptionsPosition[      5769,        177]
+NotebookOutlinePosition[      6194,        194]
+CellTagsIndexPosition[      6151,        191]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["How to clean up Mathematica\[CloseCurlyQuote]s ugly default output", \
+"Chapter",
+ CellChangeTimes->{{3.850242018930107*^9, 
+  3.850242037666026*^9}},ExpressionUUID->"e56aa602-afa9-42a1-879d-\
+19abf1045e4c"],
+
+Cell["Katharine Long, Texas Tech University", "Author",
+ CellChangeTimes->{{3.85024206258698*^9, 
+  3.8502420705462008`*^9}},ExpressionUUID->"a7ce814c-672a-4e47-8cb1-\
+2723133a7066"],
+
+Cell[CellGroupData[{
+
+Cell["By default, Mathematica\[CloseCurlyQuote]s math output looks ugly", \
+"Subsection",
+ CellChangeTimes->{{3.822677301567922*^9, 3.822677315919416*^9}, {
+  3.8226784517402067`*^9, 
+  3.82267845639634*^9}},ExpressionUUID->"016f445e-16c7-4c6a-8677-\
+941a05da6ff7"],
+
+Cell["The default is called \[OpenCurlyDoubleQuote]standard form\
+\[CloseCurlyDoubleQuote]. It looks clunky. ", "Text",
+ CellChangeTimes->{{3.822678373562296*^9, 
+  3.8226783894745893`*^9}},ExpressionUUID->"4cdc2fcf-dae4-4982-bf3b-\
+f73faac7d7b7"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StandardForm", "[", 
+  RowBox[{
+   RowBox[{"Integrate", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"x", "^", "2"}], " ", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "2"}], "x"}], "]"}], 
+      RowBox[{"Cos", "[", "x", "]"}]}], ",", "x"}], "]"}], " ", "//", 
+   "Simplify"}], "]"}]], "Input",
+ CellChangeTimes->{{3.822677042307679*^9, 3.8226770425338783`*^9}, {
+   3.8226783406347437`*^9, 3.822678364579195*^9}, {3.8226788622706213`*^9, 
+   3.8226788779639177`*^9}, {3.822678917167428*^9, 3.822678938256277*^9}, 
+   3.822678992336916*^9, {3.850241654071*^9, 3.850241658314199*^9}, {
+   3.850242120909028*^9, 3.8502421214504833`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"c8ad17c9-0d56-40d5-9aa9-8e3ea0c9c4f1"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "125"], " ", 
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{
+    RowBox[{"-", "2"}], " ", "x"}]], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "2"}], " ", 
+     RowBox[{"(", 
+      RowBox[{"2", "+", 
+       RowBox[{"15", " ", "x"}], "+", 
+       RowBox[{"25", " ", 
+        SuperscriptBox["x", "2"]}]}], ")"}], " ", 
+     RowBox[{"Cos", "[", "x", "]"}]}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"22", "+", 
+       RowBox[{"40", " ", "x"}], "+", 
+       RowBox[{"25", " ", 
+        SuperscriptBox["x", "2"]}]}], ")"}], " ", 
+     RowBox[{"Sin", "[", "x", "]"}]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{
+  3.822679464213636*^9, 3.822679552376636*^9, {3.850241649288054*^9, 
+   3.8502416587649717`*^9}, {3.85024211484509*^9, 3.850242122228505*^9}},
+ CellLabel->
+  "Out[6]//StandardForm=",ExpressionUUID->"2ac14ca6-81e4-4a8b-b7c3-\
+05b6cea4dbb8"]
+}, Open  ]],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Traditional form\[CloseCurlyDoubleQuote] looks much \
+better. You can always set it by applying the TraditionalForm function, but \
+it would be nice to have this done by default\
+\>", "Text",
+ CellChangeTimes->{{3.822678953839675*^9, 3.822678973702991*^9}, {
+  3.822679027136643*^9, 3.82267905203197*^9}, {3.822679618196312*^9, 
+  3.822679622827367*^9}},ExpressionUUID->"ce18eb44-4829-4386-b3b2-\
+1f475fa1278c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{"TraditionalForm", "[", 
+   RowBox[{
+    RowBox[{"Integrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "^", "2"}], " ", 
+       RowBox[{"Exp", "[", 
+        RowBox[{
+         RowBox[{"-", "2"}], "x"}], "]"}], 
+       RowBox[{"Cos", "[", "x", "]"}]}], ",", "x"}], "]"}], "//", " ", 
+    "Simplify"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.822678356393223*^9, 3.822678367930851*^9}, {
+  3.82267890279027*^9, 3.822678943438558*^9}, {3.850242104630621*^9, 
+  3.850242126212388*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"6bc5461c-3e7f-4f25-885b-2136378fb119"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   FractionBox["1", "125"], " ", 
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{
+     RowBox[{"-", "2"}], " ", "x"}]], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"25", " ", 
+         SuperscriptBox["x", "2"]}], "+", 
+        RowBox[{"40", " ", "x"}], "+", "22"}], ")"}], " ", 
+      RowBox[{"sin", "(", "x", ")"}]}], "-", 
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"25", " ", 
+         SuperscriptBox["x", "2"]}], "+", 
+        RowBox[{"15", " ", "x"}], "+", "2"}], ")"}], " ", 
+      RowBox[{"cos", "(", "x", ")"}]}]}], ")"}]}], TraditionalForm]], "Output",\
+
+ CellChangeTimes->{
+  3.8226796080292587`*^9, 3.850241666207328*^9, {3.850242111936256*^9, 
+   3.8502421270113707`*^9}},
+ CellLabel->
+  "Out[7]//TraditionalForm=",ExpressionUUID->"a981ab0e-38dc-417c-9852-\
+65d5dd13e4e3"]
+}, Open  ]],
+
+Cell[TextData[{
+ "To make TraditionalForm the default for your output, follow the \
+instructions here:\n",
+ ButtonBox["https://support.wolfram.com/34575?src=mathematica",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://support.wolfram.com/34575?src=mathematica"], None},
+  ButtonNote->"https://support.wolfram.com/34575?src=mathematica"]
+}], "Text",
+ CellChangeTimes->{{3.850241860960791*^9, 
+  3.850241974896015*^9}},ExpressionUUID->"4cc4e757-aa41-4d07-b424-\
+dc860b209256"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1170, 926},
+WindowMargins->{{Automatic, 138}, {100, Automatic}},
+Magnification->1.5,
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"KatharineDefault.nb",
+ExpressionUUID->"611ca288-59ac-4f37-9b19-9005f6f0f0f9"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 213, 4, 103, "Chapter",ExpressionUUID->"e56aa602-afa9-42a1-879d-19abf1045e4c"],
+Cell[796, 28, 182, 3, 47, "Author",ExpressionUUID->"a7ce814c-672a-4e47-8cb1-2723133a7066"],
+Cell[CellGroupData[{
+Cell[1003, 35, 265, 5, 77, "Subsection",ExpressionUUID->"016f445e-16c7-4c6a-8677-941a05da6ff7"],
+Cell[1271, 42, 247, 4, 53, "Text",ExpressionUUID->"4cdc2fcf-dae4-4982-bf3b-f73faac7d7b7"],
+Cell[CellGroupData[{
+Cell[1543, 50, 759, 17, 46, "Input",ExpressionUUID->"c8ad17c9-0d56-40d5-9aa9-8e3ea0c9c4f1"],
+Cell[2305, 69, 923, 28, 86, "Output",ExpressionUUID->"2ac14ca6-81e4-4a8b-b7c3-05b6cea4dbb8"]
+}, Open  ]],
+Cell[3243, 100, 444, 8, 88, "Text",ExpressionUUID->"ce18eb44-4829-4386-b3b2-1f475fa1278c"],
+Cell[CellGroupData[{
+Cell[3712, 112, 612, 16, 46, "Input",ExpressionUUID->"6bc5461c-3e7f-4f25-885b-2136378fb119"],
+Cell[4327, 130, 913, 29, 87, "Output",ExpressionUUID->"a981ab0e-38dc-417c-9852-65d5dd13e4e3"]
+}, Open  ]],
+Cell[5255, 162, 486, 11, 88, "Text",ExpressionUUID->"4cc4e757-aa41-4d07-b424-dc860b209256"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

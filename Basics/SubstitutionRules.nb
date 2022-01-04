@@ -1,0 +1,729 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     26172,        721]
+NotebookOptionsPosition[     21969,        644]
+NotebookOutlinePosition[     22393,        661]
+CellTagsIndexPosition[     22350,        658]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Substitution rules", "Chapter",
+ CellChangeTimes->{{3.850242018930107*^9, 3.850242037666026*^9}, {
+  3.850246568019414*^9, 
+  3.850246575258707*^9}},ExpressionUUID->"e56aa602-afa9-42a1-879d-\
+19abf1045e4c"],
+
+Cell["Katharine Long, Texas Tech University", "Author",
+ CellChangeTimes->{{3.8502555073126163`*^9, 
+  3.8502555150077763`*^9}},ExpressionUUID->"6829da60-2b00-4b8f-9cc8-\
+3bcfca7874bd"],
+
+Cell[TextData[{
+ "In our course we\[CloseCurlyQuote]ll use substitution rules primarily for \
+minor simplifications and for plugging solutions or numerical values into \
+expressions. There\[CloseCurlyQuote]s much more that can be done with them; \
+if you want to find out more, see ",
+ Cell[BoxData[
+  TemplateBox[{
+   "\"http://reference.wolfram.com/language/guide/RulesAndPatterns.html\"", 
+    "http://reference.wolfram.com/language/guide/RulesAndPatterns.html"},
+   "HyperlinkURL"]], "Input",
+  TextClipboardType->"PlainText",ExpressionUUID->
+  "f622dd29-94c5-4891-a92e-477d1ee9516c"],
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.850255541562146*^9, 
+  3.850255669040387*^9}},ExpressionUUID->"3a7de377-d3d4-4df1-9e5c-\
+9bd324b3a71d"],
+
+Cell[CellGroupData[{
+
+Cell["Basics of substitution rules", "Section",
+ CellChangeTimes->{{3.850255675533265*^9, 
+  3.8502556830296164`*^9}},ExpressionUUID->"ee346173-c545-4e61-9c72-\
+4cdcf94a1202"],
+
+Cell[TextData[{
+ "As the name implies, substitution rules are used to replace one expression \
+with another. Here\[CloseCurlyQuote]s how to replace ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],ExpressionUUID->
+  "ee8e8b57-83d6-4c2c-9dc2-bf6cf1ddd16f"],
+ " with ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["y", "2"], TraditionalForm]],ExpressionUUID->
+  "01cab4ef-0831-461f-9c61-ad6df7772f02"],
+ " in the expression ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"1", "+", "x"}], TraditionalForm]],ExpressionUUID->
+  "5d845447-5ee4-4768-af9a-5a2d5b0f1b8c"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.850251638206313*^9, 
+  3.850251719015295*^9}},ExpressionUUID->"f9b0b8d6-d057-4931-98a0-\
+10b5bd917a2f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"1", "+", "x"}], "/.", " ", 
+  RowBox[{"x", "\[Rule]", 
+   RowBox[{"y", "^", "2"}]}]}]], "Input",
+ CellChangeTimes->{{3.850246698303809*^9, 3.850246710966058*^9}, {
+  3.850251723368033*^9, 3.850251725118827*^9}},
+ CellLabel->"In[39]:=",ExpressionUUID->"917bcb4d-c51d-4c6f-9597-e286c15ce34b"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SuperscriptBox["y", "2"], "+", "1"}], TraditionalForm]], "Output",
+ CellChangeTimes->{3.850246711574636*^9, 3.8502517257812*^9},
+ CellLabel->"Out[39]=",ExpressionUUID->"3a8e2b16-c310-4348-b581-f6ae6be86417"]
+}, Open  ]],
+
+Cell[TextData[{
+ "The \[OpenCurlyDoubleQuote]/.\[CloseCurlyDoubleQuote] operator (pronounced \
+\[OpenCurlyDoubleQuote]slash-dot\[CloseCurlyDoubleQuote])  applies the rule \
+",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "\[Rule]", " ", 
+    SuperscriptBox["y", "2"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "8a08c1c6-9b71-4a89-9afe-de36af1a3277"],
+ " to the expression ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"1", "+", "x"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "66a0434b-0773-4750-82a1-053871ea3838"],
+ ". To enter the arrow \[OpenCurlyDoubleQuote]",
+ Cell[BoxData[
+  FormBox["\[Rule]", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "f8fe5db5-7d86-45e6-afd2-19b3bd95eaf5"],
+ "\[CloseCurlyDoubleQuote], you can either type a dash \
+\[OpenCurlyDoubleQuote]-\[OpenCurlyDoubleQuote] and then a greater-than \
+\[OpenCurlyDoubleQuote]>\[CloseCurlyDoubleQuote], or type \[EscapeKey]->\
+\[EscapeKey]. I usually do the former."
+}], "Text",
+ CellChangeTimes->{{3.8502517406552277`*^9, 3.850251744903425*^9}, {
+  3.850251793200122*^9, 3.8502519232648983`*^9}, {3.850251960745184*^9, 
+  3.850252005641427*^9}, {3.850252051427853*^9, 3.850252058963978*^9}, {
+  3.850252089454365*^9, 
+  3.8502521222212677`*^9}},ExpressionUUID->"5339c955-66ff-4d5f-a233-\
+1ae7e3e047b6"],
+
+Cell["\<\
+You can replace any expression with any other expression. For example,\
+\>", "Text",
+ CellChangeTimes->{{3.850252159679576*^9, 3.850252188401745*^9}, {
+   3.850252235470213*^9, 3.85025226434342*^9}, 
+   3.8502524253462753`*^9},ExpressionUUID->"de91f78a-79d0-4efb-8cb7-\
+b8db7acfa4da"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"1", "+", "x"}], " ", "/.", " ", 
+  RowBox[{"x", "\[Rule]", 
+   RowBox[{"-", 
+    RowBox[{
+     RowBox[{"Cos", "[", "\[Theta]", "]"}], "^", "2"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.850251192592444*^9, 3.850251208672975*^9}, {
+  3.850252079519185*^9, 3.850252082845036*^9}, {3.8502522686161613`*^9, 
+  3.850252269872011*^9}},
+ CellLabel->"In[41]:=",ExpressionUUID->"5c0b5c41-d317-4aa5-b7b0-3eb8c17273de"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"1", "-", 
+   RowBox[{
+    SuperscriptBox["cos", "2"], "(", "\[Theta]", ")"}]}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{3.850251209914736*^9, 3.850252270876733*^9},
+ CellLabel->"Out[41]=",ExpressionUUID->"418d2b7e-9412-4669-ad9f-2212b72becb8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Exp", "[", "x", "]"}], "/.", " ", 
+  RowBox[{"x", "\[Rule]", " ", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{
+     RowBox[{"f", "[", "t", "]"}], ",", "t"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.850252275984108*^9, 3.850252326592853*^9}},
+ CellLabel->"In[43]:=",ExpressionUUID->"86501a68-15df-47f5-8234-eca194e92aa5"],
+
+Cell[BoxData[
+ FormBox[
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{"\[Integral]", 
+    RowBox[{
+     RowBox[{"f", "(", "t", ")"}], 
+     RowBox[{"\[DifferentialD]", "t"}]}]}]], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.8502523149375467`*^9, 3.850252327219507*^9}},
+ CellLabel->"Out[43]=",ExpressionUUID->"c1b94dd9-a644-46fb-8a8c-c672b1be7816"]
+}, Open  ]],
+
+Cell["\<\
+You can replace a more complicated expression by a less complicated expression\
+\>", "Text",
+ CellChangeTimes->{{3.8502523664896803`*^9, 
+  3.850252383849761*^9}},ExpressionUUID->"1d60d77b-1492-4a89-ada4-\
+1d4cd5cbf7e9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"1", "/", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{"1", " ", "+", " ", 
+     RowBox[{"Exp", "[", "x", "]"}]}], "]"}]}], " ", "/.", " ", 
+  RowBox[{
+   RowBox[{"Exp", "[", "x", "]"}], "\[Rule]", " ", "u"}]}]], "Input",
+ CellChangeTimes->{{3.850252334681027*^9, 3.850252355713669*^9}, {
+  3.850252403762693*^9, 3.850252410305089*^9}},
+ CellLabel->"In[46]:=",ExpressionUUID->"4ac5781b-8d93-44c3-aeee-a18bb4aac36e"],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox["1", 
+   SqrtBox[
+    RowBox[{"u", "+", "1"}]]], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.850252347683666*^9, 3.850252356285356*^9}, 
+   3.850252410837989*^9},
+ CellLabel->"Out[46]=",ExpressionUUID->"62320008-fd08-438d-95b7-bf219c79c8c8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["A practical example: plugging numbers into a formula", "Subsection",
+ CellChangeTimes->{{3.8502527641045637`*^9, 
+  3.850252781944174*^9}},ExpressionUUID->"0f51dfde-f2f5-48d3-a31f-\
+0bd574728db1"],
+
+Cell[TextData[{
+ "You\[CloseCurlyQuote]ll usually want to go as far as possible in a \
+calculation before plugging in numbers for symbols. Here\[CloseCurlyQuote]s a \
+calculation of the velocity \[OpenCurlyDoubleQuote]kick\
+\[CloseCurlyDoubleQuote] ",
+ Cell[BoxData[
+  FormBox["\[CapitalDelta]v", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "e6be3424-0997-41dd-bdfb-96a879827cef"],
+ " given to an alpha particle during a close encounter with a gold atom in \
+the Rutherford experiment. The distance of closest approach (\
+\[OpenCurlyDoubleQuote]impact parameter\[CloseCurlyDoubleQuote]) is ",
+ Cell[BoxData[
+  FormBox["b", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "5d88aba0-7930-4128-b9c9-b69e53d9daaa"],
+ ", and the initial velocity is ",
+ Cell[BoxData[
+  FormBox["v", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "fe8daeed-9efb-4f22-bf5c-a16b12d0dff0"],
+ ". The calculation is done using the \[OpenCurlyDoubleQuote]impulse \
+approximation\[CloseCurlyDoubleQuote] (an exact calculation can be done using \
+methods you\[CloseCurlyQuote]ll learn in classical mechanics.)"
+}], "Text",
+ CellChangeTimes->{{3.8502527906011257`*^9, 3.8502528283693323`*^9}, {
+  3.850254285493451*^9, 3.8502545476527767`*^9}, {3.850254797249902*^9, 
+  3.850254803522993*^9}},ExpressionUUID->"5ddb637e-5487-4dae-b95b-\
+281da33258f0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[CapitalDelta]v", " ", "=", " ", 
+  RowBox[{
+   SubscriptBox["Z", "1"], 
+   SubscriptBox["Z", "2"], 
+   RowBox[{
+    RowBox[{"e", "^", "2"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"4", " ", "Pi", " ", 
+      SubscriptBox["\[Epsilon]", "0"], 
+      SubscriptBox["m", "\[Alpha]"]}], ")"}]}], " ", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{
+     RowBox[{"b", "/", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"b", "^", "2"}], " ", "+", " ", 
+         RowBox[{
+          RowBox[{"v", "^", "2"}], 
+          RowBox[{"t", "^", "2"}]}]}], ")"}], "^", 
+       RowBox[{"(", 
+        RowBox[{"3", "/", "2"}], ")"}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", 
+       RowBox[{"-", "Infinity"}], ",", "Infinity"}], "}"}], ",", 
+     RowBox[{"Assumptions", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"v", ">", "0"}], ",", 
+        RowBox[{"b", ">", "0"}]}], "}"}]}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.850253434194687*^9, 3.8502535218082438`*^9}, {
+  3.850253554362547*^9, 3.850253564769245*^9}, {3.850253911738429*^9, 
+  3.8502539134087353`*^9}, {3.8502540747611427`*^9, 3.850254111428486*^9}, {
+  3.850254186061185*^9, 3.8502541905629272`*^9}},
+ CellLabel->"In[67]:=",ExpressionUUID->"477e754d-ee0b-49ff-a6b2-cc387aff8fa4"],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{
+    SuperscriptBox["e", "2"], " ", 
+    SubscriptBox["Z", "1"], " ", 
+    SubscriptBox["Z", "2"]}], 
+   RowBox[{"2", " ", "\[Pi]", " ", "b", " ", "v", " ", 
+    SubscriptBox["\[Epsilon]", "0"], " ", 
+    SubscriptBox["m", "\[Alpha]"]}]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.850253523290811*^9, 3.8502535664054937`*^9, 
+  3.850253969594346*^9, 3.850254077397814*^9, 3.8502541133249598`*^9, 
+  3.850254212334046*^9},
+ CellLabel->"Out[67]=",ExpressionUUID->"bc0d09c5-f6c3-4c5b-a50b-eb74adab20be"]
+}, Open  ]],
+
+Cell[TextData[{
+ "It\[CloseCurlyQuote]s a really bad idea to plug in numbers",
+ StyleBox[" before",
+  FontSlant->"Italic"],
+ " doing the integral. However, to compare to data we need to plug numbers \
+into the result, and you\[CloseCurlyQuote]ll often need to play around with \
+parameters. That\[CloseCurlyQuote]s easily done with substitution rules. "
+}], "Text",
+ CellChangeTimes->{{3.850255205889427*^9, 3.850255324164061*^9}, {
+  3.8502553754931087`*^9, 
+  3.850255404990196*^9}},ExpressionUUID->"810c28e7-5785-4d62-a266-\
+a8987f989e6a"],
+
+Cell[TextData[{
+ "At the time of Rutherford\[CloseCurlyQuote]s experiment, the atom was \
+imagined to be a distributed blob of positive charge with electron particles \
+within (\[OpenCurlyDoubleQuote]plum pudding model\[CloseCurlyDoubleQuote]). \
+The radius of a gold atom was thought to be about ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["10", 
+    RowBox[{"-", "10"}]], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "43da5e9b-4648-4912-b12b-4ea0ac69a04e"],
+ "m, so the maximum force would occur at about ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"b", "\[TildeTilde]", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "10"}]]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "c5659d31-6569-4d10-a1df-f39d771518de"],
+ "m. The deflection angle is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[CapitalDelta]\[Theta]", "\[TildeTilde]", 
+    RowBox[{
+     SuperscriptBox["tan", 
+      RowBox[{"-", "1"}]], "(", 
+     RowBox[{"\[CapitalDelta]v", "/", "v"}], ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "7c8fd58b-aa03-4046-b74b-1af3bfdf1979"],
+ ". Plugging in numbers and converting to degrees, we find:"
+}], "Text",
+ CellChangeTimes->{{3.850254557412685*^9, 3.850254694896394*^9}, {
+  3.85025481662805*^9, 3.850254881877181*^9}, {3.850255328899632*^9, 
+  3.8502553341405573`*^9}},ExpressionUUID->"9d72c181-f6ba-49ed-9878-\
+92d43c025d1f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[CapitalDelta]\[Theta]", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"180", "/", "Pi"}], " ", 
+    RowBox[{"ArcTan", "[", 
+     RowBox[{"\[CapitalDelta]v", "/", "v"}], "]"}]}], " ", "/.", "  ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"b", " ", "\[Rule]", " ", 
+      RowBox[{"10", "^", 
+       RowBox[{"-", "10"}]}]}], ",", " ", 
+     RowBox[{"e", "\[Rule]", " ", 
+      RowBox[{"1.602", " ", 
+       RowBox[{"10", "^", 
+        RowBox[{"-", "19"}]}]}]}], ",", 
+     RowBox[{
+      SubscriptBox["Z", "1"], "\[Rule]", "79"}], ",", 
+     RowBox[{
+      SubscriptBox["Z", "2"], "\[Rule]", " ", "2"}], ",", 
+     RowBox[{"v", "\[Rule]", " ", 
+      RowBox[{"1.5", " ", 
+       RowBox[{"10", "^", "7"}]}]}], ",", " ", 
+     RowBox[{
+      SubscriptBox["\[Epsilon]", "0"], "\[Rule]", " ", 
+      RowBox[{"8.854", " ", 
+       RowBox[{"10", "^", 
+        RowBox[{"-", "12"}]}]}]}], ",", " ", 
+     RowBox[{
+      SubscriptBox["m", "\[Alpha]"], "\[Rule]", 
+      RowBox[{"6.645", " ", 
+       RowBox[{"10", "^", 
+        RowBox[{"-", "27"}]}]}]}]}], "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.8502547154702187`*^9, 3.850254750618857*^9}},
+ CellLabel->"In[74]:=",ExpressionUUID->"66179928-cc13-46e3-8c82-479ef1debd07"],
+
+Cell[BoxData[
+ FormBox["0.027932372114059748`", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.850254743781248*^9, 3.85025475115128*^9}, 
+   3.850254885674534*^9},
+ CellLabel->"Out[74]=",ExpressionUUID->"1a928397-f075-4f06-b3e7-b3ce81008dfd"]
+}, Open  ]],
+
+Cell[TextData[{
+ "That\[CloseCurlyQuote]s under a degree; Rutherford and his students Geiger \
+and Marsden found that some particles were being scattered by over ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["90", "\[Degree]"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "b159aa33-40c2-46cc-9ee1-61aa78a2d99a"],
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.850254899207556*^9, 
+  3.850254973605103*^9}},ExpressionUUID->"94db8b54-c3e5-494a-9af6-\
+d205b766910f"],
+
+Cell[TextData[{
+ "Try again with a smaller ",
+ Cell[BoxData[
+  FormBox["b", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "1cb066e3-595f-4031-ad85-c3860849a2ae"],
+ ", say ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"b", "=", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "14"}]]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "6eabfb1f-22a2-46f4-ae13-38c2510ffe39"],
+ "m:"
+}], "Text",
+ CellChangeTimes->{{3.8502549917329283`*^9, 3.8502550129886427`*^9}, {
+  3.850255051750307*^9, 
+  3.8502550809019117`*^9}},ExpressionUUID->"fc9742f0-eb3c-4331-a2de-\
+5d6b0ce0f3ed"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[CapitalDelta]\[Theta]", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"180", "/", "Pi"}], " ", 
+    RowBox[{"ArcTan", "[", 
+     RowBox[{"\[CapitalDelta]v", "/", "v"}], "]"}]}], " ", "/.", "  ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"b", " ", "\[Rule]", " ", 
+      RowBox[{"10", "^", 
+       RowBox[{"-", "14"}]}]}], ",", " ", 
+     RowBox[{"e", "\[Rule]", " ", 
+      RowBox[{"1.602", " ", 
+       RowBox[{"10", "^", 
+        RowBox[{"-", "19"}]}]}]}], ",", 
+     RowBox[{
+      SubscriptBox["Z", "1"], "\[Rule]", "79"}], ",", 
+     RowBox[{
+      SubscriptBox["Z", "2"], "\[Rule]", " ", "2"}], ",", 
+     RowBox[{"v", "\[Rule]", " ", 
+      RowBox[{"1.5", " ", 
+       RowBox[{"10", "^", "7"}]}]}], ",", " ", 
+     RowBox[{
+      SubscriptBox["\[Epsilon]", "0"], "\[Rule]", " ", 
+      RowBox[{"8.854", " ", 
+       RowBox[{"10", "^", 
+        RowBox[{"-", "12"}]}]}]}], ",", " ", 
+     RowBox[{
+      SubscriptBox["m", "\[Alpha]"], "\[Rule]", 
+      RowBox[{"6.645", " ", 
+       RowBox[{"10", "^", 
+        RowBox[{"-", "27"}]}]}]}]}], "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.850255022998329*^9, 3.85025502335732*^9}, {
+  3.850255057662723*^9, 3.8502550581424093`*^9}},
+ CellLabel->"In[77]:=",ExpressionUUID->"4aa63972-434c-430b-9bfe-74b2376a400c"],
+
+Cell[BoxData[
+ FormBox["78.40809988998376`", TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.850255023910626*^9, {3.850255058630485*^9, 3.850255060375091*^9}},
+ CellLabel->"Out[77]=",ExpressionUUID->"b9692e2c-1924-41f2-84b7-4d7130fe5f5b"]
+}, Open  ]],
+
+Cell["\<\
+That\[CloseCurlyQuote]s much closer to the observed large angle scattering. \
+In your advanced courses you\[CloseCurlyQuote]ll do a more accurate \
+calculation. \
+\>", "Text",
+ CellChangeTimes->{{3.8502550647498407`*^9, 
+  3.850255173815261*^9}},ExpressionUUID->"438429ce-85ef-4d3d-99f0-\
+176c630b0464"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["A practical example: simplifying Fourier coefficients", "Subsection",
+ CellChangeTimes->{{3.850252465211858*^9, 3.8502524684191*^9}, {
+  3.8502527440803957`*^9, 
+  3.850252751024581*^9}},ExpressionUUID->"24931752-0569-4406-83f1-\
+1f5687590ebd"],
+
+Cell["\<\
+In Fourier analysis, we\[CloseCurlyQuote]ll need to do integrals like this \
+one. \
+\>", "Text",
+ CellChangeTimes->{{3.8502524975553217`*^9, 
+  3.850252522660166*^9}},ExpressionUUID->"5ab27ed6-4e7d-465b-a530-\
+7b9ef00f0396"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["B", "n_"], "=", 
+  RowBox[{
+   RowBox[{"1", "/", "Pi"}], " ", 
+   RowBox[{"Integrate", "[", 
+    RowBox[{
+     RowBox[{"x", " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"n", " ", "x"}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "Pi"}], ",", "Pi"}], "}"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.850246878890416*^9, 3.850246930962191*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"c02de7b0-032e-4a9c-aa47-eef3464a0625"],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{
+    RowBox[{"2", " ", 
+     RowBox[{"sin", "(", 
+      RowBox[{"\[Pi]", " ", "n"}], ")"}]}], "-", 
+    RowBox[{"2", " ", "\[Pi]", " ", "n", " ", 
+     RowBox[{"cos", "(", 
+      RowBox[{"\[Pi]", " ", "n"}], ")"}]}]}], 
+   RowBox[{"\[Pi]", " ", 
+    SuperscriptBox["n", "2"]}]], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.8502469271715803`*^9, 3.850246931591752*^9}},
+ CellLabel->"Out[5]=",ExpressionUUID->"c2527810-f41f-48f1-8e59-9318f624c5ab"]
+}, Open  ]],
+
+Cell[TextData[{
+ "In that application, the variable ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "dcd0d577-a492-47b3-a98b-7aab5431079a"],
+ " is a positive integer; therefore we know that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"sin", "(", 
+     RowBox[{"n", " ", "\[Pi]"}], ")"}], "=", "0"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "1ebef670-a543-41d3-96a0-45bf8b4dadda"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"cos", "(", 
+     RowBox[{"n", " ", "\[Pi]"}], ")"}], "=", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"-", "1"}], ")"}], "n"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "2a0781b3-0883-4617-b8ec-241d922a3eaa"],
+ ". But Mathematica doesn\[CloseCurlyQuote]t know that restriction on ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "f02c5af6-c902-4118-87aa-ef1f95f749ed"],
+ ", so produced the general result. \n\nTo clean up the formula, use a \
+substitution rule to replace ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"sin", "(", 
+    RowBox[{"n", " ", "\[Pi]"}], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "5b434f74-fc6b-4ccf-a877-b95d3afab4ee"],
+ " by 0 and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"cos", "(", 
+    RowBox[{"n", " ", "\[Pi]"}], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "223e4588-0ae1-403a-9a48-15415f90a3cb"],
+ " by ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"-", "1"}], ")"}], "n"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "40423ea9-078e-4401-8cf6-1766f8619bc1"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.850252529780854*^9, 
+  3.8502527011990147`*^9}},ExpressionUUID->"26fa4516-d1b9-4b69-814f-\
+e76b8f6bf7b8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["B", "n"], "/.", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Sin", "[", 
+      RowBox[{"n", " ", "Pi"}], "]"}], "\[Rule]", "0"}], ",", " ", 
+    RowBox[{
+     RowBox[{"Cos", "[", 
+      RowBox[{"n", " ", "Pi"}], "]"}], "\[Rule]", " ", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"-", "1"}], ")"}], "^", "n"}]}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.850246934892314*^9, 3.8502469529945183`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"d0cc72c4-11a1-4b33-be2e-acfbd9201ddf"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"-", 
+   FractionBox[
+    RowBox[{"2", " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"-", "1"}], ")"}], "n"]}], "n"]}], TraditionalForm]], "Output",\
+
+ CellChangeTimes->{3.850246953609548*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"ca1b6a97-e07e-43db-9d24-94c294360e04"]
+}, Open  ]],
+
+Cell["That\[CloseCurlyQuote]s much more readable. ", "Text",
+ CellChangeTimes->{{3.850252714743349*^9, 
+  3.850252719823793*^9}},ExpressionUUID->"976b814d-e3f9-45df-8d8e-\
+37f7a3e09aae"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1170, 926},
+WindowMargins->{{247, Automatic}, {Automatic, 26}},
+Magnification->1.5,
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"KatharineDefault.nb",
+ExpressionUUID->"611ca288-59ac-4f37-9b19-9005f6f0f0f9"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 212, 4, 103, "Chapter",ExpressionUUID->"e56aa602-afa9-42a1-879d-19abf1045e4c"],
+Cell[795, 28, 185, 3, 47, "Author",ExpressionUUID->"6829da60-2b00-4b8f-9cc8-3bcfca7874bd"],
+Cell[983, 33, 733, 16, 122, "Text",ExpressionUUID->"3a7de377-d3d4-4df1-9e5c-9bd324b3a71d"],
+Cell[CellGroupData[{
+Cell[1741, 53, 175, 3, 93, "Section",ExpressionUUID->"ee346173-c545-4e61-9c72-4cdcf94a1202"],
+Cell[1919, 58, 701, 20, 89, "Text",ExpressionUUID->"f9b0b8d6-d057-4931-98a0-10b5bd917a2f"],
+Cell[CellGroupData[{
+Cell[2645, 82, 325, 7, 46, "Input",ExpressionUUID->"917bcb4d-c51d-4c6f-9597-e286c15ce34b"],
+Cell[2973, 91, 245, 5, 50, "Output",ExpressionUUID->"3a8e2b16-c310-4348-b581-f6ae6be86417"]
+}, Open  ]],
+Cell[3233, 99, 1344, 31, 124, "Text",ExpressionUUID->"5339c955-66ff-4d5f-a233-1ae7e3e047b6"],
+Cell[4580, 132, 294, 6, 53, "Text",ExpressionUUID->"de91f78a-79d0-4efb-8cb7-b8db7acfa4da"],
+Cell[CellGroupData[{
+Cell[4899, 142, 441, 10, 46, "Input",ExpressionUUID->"5c0b5c41-d317-4aa5-b7b0-3eb8c17273de"],
+Cell[5343, 154, 289, 7, 50, "Output",ExpressionUUID->"418d2b7e-9412-4669-ad9f-2212b72becb8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5669, 166, 357, 8, 46, "Input",ExpressionUUID->"86501a68-15df-47f5-8234-eca194e92aa5"],
+Cell[6029, 176, 357, 8, 51, "Output",ExpressionUUID->"c1b94dd9-a644-46fb-8a8c-c672b1be7816"]
+}, Open  ]],
+Cell[6401, 187, 230, 5, 53, "Text",ExpressionUUID->"1d60d77b-1492-4a89-ada4-1d4cd5cbf7e9"],
+Cell[CellGroupData[{
+Cell[6656, 196, 442, 10, 46, "Input",ExpressionUUID->"4ac5781b-8d93-44c3-aeee-a18bb4aac36e"],
+Cell[7101, 208, 286, 7, 77, "Output",ExpressionUUID->"62320008-fd08-438d-95b7-bf219c79c8c8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7424, 220, 202, 3, 77, "Subsection",ExpressionUUID->"0f51dfde-f2f5-48d3-a31f-0bd574728db1"],
+Cell[7629, 225, 1389, 28, 194, "Text",ExpressionUUID->"5ddb637e-5487-4dae-b95b-281da33258f0"],
+Cell[CellGroupData[{
+Cell[9043, 257, 1304, 35, 78, "Input",ExpressionUUID->"477e754d-ee0b-49ff-a6b2-cc387aff8fa4"],
+Cell[10350, 294, 558, 13, 78, "Output",ExpressionUUID->"bc0d09c5-f6c3-4c5b-a50b-eb74adab20be"]
+}, Open  ]],
+Cell[10923, 310, 542, 11, 122, "Text",ExpressionUUID->"810c28e7-5785-4d62-a266-a8987f989e6a"],
+Cell[11468, 323, 1411, 34, 158, "Text",ExpressionUUID->"9d72c181-f6ba-49ed-9878-92d43c025d1f"],
+Cell[CellGroupData[{
+Cell[12904, 361, 1235, 34, 78, "Input",ExpressionUUID->"66179928-cc13-46e3-8c82-479ef1debd07"],
+Cell[14142, 397, 246, 4, 47, "Output",ExpressionUUID->"1a928397-f075-4f06-b3e7-b3ce81008dfd"]
+}, Open  ]],
+Cell[14403, 404, 483, 12, 89, "Text",ExpressionUUID->"94db8b54-c3e5-494a-9af6-d205b766910f"],
+Cell[14889, 418, 610, 19, 54, "Text",ExpressionUUID->"fc9742f0-eb3c-4331-a2de-5d6b0ce0f3ed"],
+Cell[CellGroupData[{
+Cell[15524, 441, 1283, 35, 78, "Input",ExpressionUUID->"4aa63972-434c-430b-9bfe-74b2376a400c"],
+Cell[16810, 478, 243, 4, 47, "Output",ExpressionUUID->"b9692e2c-1924-41f2-84b7-4d7130fe5f5b"]
+}, Open  ]],
+Cell[17068, 485, 313, 7, 88, "Text",ExpressionUUID->"438429ce-85ef-4d3d-99f0-176c630b0464"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17418, 497, 250, 4, 77, "Subsection",ExpressionUUID->"24931752-0569-4406-83f1-1f5687590ebd"],
+Cell[17671, 503, 234, 6, 53, "Text",ExpressionUUID->"5ab27ed6-4e7d-465b-a530-7b9ef00f0396"],
+Cell[CellGroupData[{
+Cell[17930, 513, 502, 14, 49, "Input",ExpressionUUID->"c02de7b0-032e-4a9c-aa47-eef3464a0625"],
+Cell[18435, 529, 503, 13, 74, "Output",ExpressionUUID->"c2527810-f41f-48f1-8e59-9318f624c5ab"]
+}, Open  ]],
+Cell[18953, 545, 1887, 57, 160, "Text",ExpressionUUID->"26fa4516-d1b9-4b69-814f-e76b8f6bf7b8"],
+Cell[CellGroupData[{
+Cell[20865, 606, 540, 15, 46, "Input",ExpressionUUID->"d0cc72c4-11a1-4b33-be2e-acfbd9201ddf"],
+Cell[21408, 623, 320, 10, 71, "Output",ExpressionUUID->"ca1b6a97-e07e-43db-9d24-94c294360e04"]
+}, Open  ]],
+Cell[21743, 636, 186, 3, 53, "Text",ExpressionUUID->"976b814d-e3f9-45df-8d8e-37f7a3e09aae"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

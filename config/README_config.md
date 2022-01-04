@@ -6,11 +6,11 @@ You can set default options or do any other initialization in the file `init.m`.
 - My preferred plotting options. Your choices might be different. 
 - The FourierParameters options that correspond to $1/\sqrt(2\pi)$ factors on both the FT and IFT, and $e^{-ikx}$ in the FT. These are the choices used in Hassani's mathematical physics books. 
 
-To set your own initialization file, you need to put init.m in a location known to Mathematica. See [link](https://reference.wolfram.com/language/ref/file/init.m.html) for information on where to put it. Here's where it normally goes on computers I use: 
+To set your own initialization file, you need to put init.m in a location known to Mathematica. See [Wolfram's documentation](https://reference.wolfram.com/language/ref/file/init.m.html) for information on where to put it. Here's where it normally goes on computers I use: 
 - Mac: $HOME/Library/Mathematica/Kernel/init.m
 - Linux: $HOME/.Mathematica/Kernel/init.m
 
 ## Setting TraditionalForm for default output
 
 By default, Mathematica outputs in "StandardForm", which I find ugly and hard to read. 
-- In SettingTraditionalForm.pdf, there are examples of both and a link to instructions on how to change the default. 
+- In SettingTraditionalForm.pdf, there are examples of both and a link to [instructions](https://support.wolfram.com/34575?src=mathematica) on how to change the default to TraditionalForm

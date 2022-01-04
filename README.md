@@ -1,9 +1,6 @@
 # Katharine Long's Mathematica notes
 
-- `config`: information on setting up your system
-- `Basics`: getting started with _Mathematica_
-- `Vectors`: simple vector operations
-- `Coordinates`: non-Cartesian coordinate systems
+These are various _Mathematica_ notebooks I've put together while teaching. 
 
 ## Courses
 

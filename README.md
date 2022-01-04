@@ -18,6 +18,14 @@
   - `FourierTransforms`
 - PHYS/MATH 4325 (Math Methods 1)
   - `Coordinates`
+  - `Integration`
+  - `Matrices`
   - `PowerSeries`
   - `FourierSeries`
   - `ODE`
+  - `VectorCalc`
+- PHYS/MATH 4326 (Math Methods 2)
+  - `PDE`
+  - `Variations`
+  - `Complex`
+  - `FourierTransforms`

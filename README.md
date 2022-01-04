@@ -7,17 +7,17 @@
 
 ## Courses
 - Everyone: 
--- `config`
--- `Basics`
--- `Vectors`
--- `Plotting`
+  - `config`
+  - `Basics`
+  - `Vectors`
+  - `Plotting`
 - MATH 3351 or 4354 (DE 2)
--- `Matrices`
--- `FourierSeries`
--- `PDE`
--- `FourierTransforms`
+  - `Matrices`
+  - `FourierSeries`
+  - `PDE`
+  - `FourierTransforms`
 - PHYS/MATH 4325 (Math Methods 1)
--- `Coordinates`
--- `PowerSeries`
--- `FourierSeries`
--- `ODE`
+  - `Coordinates`
+  - `PowerSeries`
+  - `FourierSeries`
+  - `ODE`

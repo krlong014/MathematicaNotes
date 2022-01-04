@@ -9,10 +9,10 @@
 
 Here's a guide to what to look at if you're in one of my courses.
 
-- Everyone: 
+- All courses: 
   - `config`: information on setting up your system
   - `Basics`: getting started with Mathematica
-  - `Vectors: simple vector operations
+  - `Vectors`: simple vector operations
   - `Plotting`: simple plotting
 - MATH 3351 or 4354 (DE 2)
   - `Matrices`: matrix operations, systems of equations, eigensystems

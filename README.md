@@ -2,7 +2,7 @@
 
 These are various _Mathematica_ notebooks I've put together while teaching. 
 
-## Courses
+## Breakdown by course
 
 Here's a guide to what to look at if you're in one of my courses.
 

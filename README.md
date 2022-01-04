@@ -1,4 +1,5 @@
 # Katharine Long's Mathematica notes
 
-## Getting started
-- config/init.m is the 
+## My system setup
+- config/init.m 
+- config/SettingTraditionalForm.pdf

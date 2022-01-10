@@ -1,0 +1,507 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17545,        499]
+NotebookOptionsPosition[     14171,        433]
+NotebookOutlinePosition[     14737,        451]
+CellTagsIndexPosition[     14694,        448]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["A singular matrix with a big numerical determinant", "Title",
+ CellChangeTimes->{{3.850436144060017*^9, 
+  3.8504361544594803`*^9}},ExpressionUUID->"81d5e994-31a1-45e8-9a52-\
+0389ef102cb3"],
+
+Cell["Katharine Long, Texas Tech University", "Author",
+ CellChangeTimes->{{3.850436922430418*^9, 
+  3.850436929783477*^9}},ExpressionUUID->"148bc70e-f0c2-46ce-afc7-\
+990d7f7f4aa7"],
+
+Cell[CellGroupData[{
+
+Cell["Generate a random matrix of integers", "Subsection",
+ CellChangeTimes->{{3.8504361726363363`*^9, 
+  3.850436185676935*^9}},ExpressionUUID->"a87c0a8c-b02c-4075-a730-\
+68bcce625049"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"A", "=", 
+  RowBox[{"RandomInteger", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", "100"}], ",", "100"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"10", ",", "10"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.8504357123030148`*^9, 3.850435736326395*^9}, {
+  3.8504358837485456`*^9, 3.8504358856828747`*^9}, {3.8504360835229273`*^9, 
+  3.850436113403174*^9}, {3.850436586007567*^9, 3.850436587798805*^9}},
+ CellLabel->
+  "In[138]:=",ExpressionUUID->"ed0570a1-9ee6-4641-8322-8f3b560293c1"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{"-", "1"}], 
+      RowBox[{"-", "30"}], 
+      RowBox[{"-", "80"}], 
+      RowBox[{"-", "44"}], "26", 
+      RowBox[{"-", "72"}], "31", 
+      RowBox[{"-", "10"}], 
+      RowBox[{"-", "32"}], "10"},
+     {"76", 
+      RowBox[{"-", "81"}], "44", 
+      RowBox[{"-", "12"}], 
+      RowBox[{"-", "15"}], 
+      RowBox[{"-", "96"}], "11", "9", 
+      RowBox[{"-", "9"}], 
+      RowBox[{"-", "53"}]},
+     {"65", 
+      RowBox[{"-", "76"}], 
+      RowBox[{"-", "32"}], 
+      RowBox[{"-", "47"}], 
+      RowBox[{"-", "99"}], 
+      RowBox[{"-", "67"}], "30", 
+      RowBox[{"-", "15"}], "74", "94"},
+     {"74", 
+      RowBox[{"-", "63"}], 
+      RowBox[{"-", "78"}], "93", 
+      RowBox[{"-", "85"}], 
+      RowBox[{"-", "96"}], 
+      RowBox[{"-", "50"}], "49", "13", 
+      RowBox[{"-", "23"}]},
+     {
+      RowBox[{"-", "73"}], 
+      RowBox[{"-", "28"}], 
+      RowBox[{"-", "91"}], "0", "88", 
+      RowBox[{"-", "54"}], "73", "99", "14", 
+      RowBox[{"-", "48"}]},
+     {
+      RowBox[{"-", "39"}], "29", "69", 
+      RowBox[{"-", "19"}], "42", 
+      RowBox[{"-", "22"}], "65", "94", "68", "26"},
+     {"82", "69", "48", 
+      RowBox[{"-", "46"}], "70", 
+      RowBox[{"-", "91"}], "93", "31", 
+      RowBox[{"-", "28"}], "79"},
+     {"61", 
+      RowBox[{"-", "20"}], "43", "53", "28", 
+      RowBox[{"-", "79"}], "53", 
+      RowBox[{"-", "95"}], "7", "18"},
+     {
+      RowBox[{"-", "99"}], 
+      RowBox[{"-", "23"}], 
+      RowBox[{"-", "1"}], 
+      RowBox[{"-", "31"}], "77", "61", 
+      RowBox[{"-", "32"}], "6", "30", 
+      RowBox[{"-", "99"}]},
+     {
+      RowBox[{"-", "32"}], "14", "62", "34", "26", "87", "43", 
+      RowBox[{"-", "5"}], 
+      RowBox[{"-", "38"}], 
+      RowBox[{"-", "24"}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.8504357309361963`*^9, 3.8504357369031277`*^9}, 
+   3.850435823697356*^9, {3.8504358800353317`*^9, 3.850435889493784*^9}, {
+   3.8504360862198257`*^9, 3.850436114093495*^9}, 3.850436433837932*^9, 
+   3.850436588537588*^9},
+ CellLabel->
+  "Out[138]=",ExpressionUUID->"de096df8-aba5-4545-8ce7-63c9821a7993"]
+}, Open  ]],
+
+Cell["\<\
+Since the elements are integers, we can compute the determinant exactly. It \
+isn\[CloseCurlyQuote]t zero. If by amazing chance it is, re-run to get \
+another random matrix. (The odds of producing a singular matrix randomly are \
+tiny; can you think of why?)\
+\>", "Text",
+ CellChangeTimes->{{3.850436192653496*^9, 3.850436249061934*^9}, {
+  3.850436998930695*^9, 
+  3.850437040578787*^9}},ExpressionUUID->"7dda1ec6-ddd3-4551-a234-\
+5b44777f29f7"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Det", "[", "A", "]"}]], "Input",
+ CellChangeTimes->{{3.8504358191133966`*^9, 3.850435820480865*^9}},
+ CellLabel->
+  "In[139]:=",ExpressionUUID->"76077223-3df9-427e-aca8-e1c211d2d2e2"],
+
+Cell[BoxData[
+ FormBox["66254956891474549124", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.850435820936799*^9, 3.850435826063785*^9}, {
+   3.8504358800701723`*^9, 3.850435889523381*^9}, {3.850436088665475*^9, 
+   3.850436116682179*^9}, 3.850436436488603*^9, 3.8504365919352417`*^9},
+ CellLabel->
+  "Out[139]=",ExpressionUUID->"02d4b7cf-d269-4ebe-b3bd-df6e8923bd69"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Make a singular matrix by replacing the first column with a random linear \
+combination the of other columns\
+\>", "Subsection",
+ CellChangeTimes->{{3.850436271663166*^9, 3.85043629515187*^9}, {
+  3.850436362272766*^9, 3.850436373545706*^9}, {3.8504364091705103`*^9, 
+  3.850436409626536*^9}, {3.850436497860539*^9, 
+  3.850436512732361*^9}},ExpressionUUID->"118f9160-cb90-4a7e-8eed-\
+9323462d5513"],
+
+Cell["Here\[CloseCurlyQuote]s the code to do the replacement.", "Text",
+ CellChangeTimes->{{3.8504363211764183`*^9, 
+  3.85043633706465*^9}},ExpressionUUID->"bd9c26ac-6806-4835-9b9c-\
+8b4c97f07e7f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"A", "[", 
+   RowBox[{"[", 
+    RowBox[{";;", ",", "1"}], "]"}], "]"}], "=", 
+  RowBox[{"Sum", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"RandomInteger", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3"}], ",", "3"}], "}"}], "]"}], 
+     RowBox[{"A", "[", 
+      RowBox[{"[", 
+       RowBox[{";;", ",", "j"}], "]"}], "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "2", ",", 
+      RowBox[{"Length", "[", "A", "]"}]}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.850435740454434*^9, 3.850435772903872*^9}, {
+  3.850436378251012*^9, 3.850436427355288*^9}, {3.8504366588502903`*^9, 
+  3.850436661023328*^9}},
+ CellLabel->
+  "In[144]:=",ExpressionUUID->"5fa276eb-45ab-451e-86a2-dfb2d0dc0dc4"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{"59", ",", 
+    RowBox[{"-", "112"}], ",", "201", ",", "340", ",", 
+    RowBox[{"-", "56"}], ",", "207", ",", "640", ",", 
+    RowBox[{"-", "132"}], ",", 
+    RowBox[{"-", "854"}], ",", 
+    RowBox[{"-", "106"}]}], "}"}], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.850435773870234*^9, 3.850435828835565*^9, {3.85043588007547*^9, 
+   3.8504358895293837`*^9}, {3.850436098417428*^9, 3.850436118995192*^9}, {
+   3.85043642871031*^9, 3.850436443229738*^9}, {3.850436652185155*^9, 
+   3.850436661604703*^9}},
+ CellLabel->
+  "Out[144]=",ExpressionUUID->"88a1272e-01fd-43cf-8d15-9e7d627229cd"]
+}, Open  ]],
+
+Cell["Have a look at the matrix", "Text",
+ CellChangeTimes->{{3.85043634612175*^9, 3.850436357432966*^9}, {
+  3.850436446068614*^9, 
+  3.850436448411158*^9}},ExpressionUUID->"9c435700-9fa3-48fa-9f87-\
+7fb32df7574b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["A"], "Input",
+ CellChangeTimes->{3.850435778585367*^9},
+ CellLabel->
+  "In[145]:=",ExpressionUUID->"4db73f43-5626-470a-8c07-c4b96e56862a"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"59", 
+      RowBox[{"-", "30"}], 
+      RowBox[{"-", "80"}], 
+      RowBox[{"-", "44"}], "26", 
+      RowBox[{"-", "72"}], "31", 
+      RowBox[{"-", "10"}], 
+      RowBox[{"-", "32"}], "10"},
+     {
+      RowBox[{"-", "112"}], 
+      RowBox[{"-", "81"}], "44", 
+      RowBox[{"-", "12"}], 
+      RowBox[{"-", "15"}], 
+      RowBox[{"-", "96"}], "11", "9", 
+      RowBox[{"-", "9"}], 
+      RowBox[{"-", "53"}]},
+     {"201", 
+      RowBox[{"-", "76"}], 
+      RowBox[{"-", "32"}], 
+      RowBox[{"-", "47"}], 
+      RowBox[{"-", "99"}], 
+      RowBox[{"-", "67"}], "30", 
+      RowBox[{"-", "15"}], "74", "94"},
+     {"340", 
+      RowBox[{"-", "63"}], 
+      RowBox[{"-", "78"}], "93", 
+      RowBox[{"-", "85"}], 
+      RowBox[{"-", "96"}], 
+      RowBox[{"-", "50"}], "49", "13", 
+      RowBox[{"-", "23"}]},
+     {
+      RowBox[{"-", "56"}], 
+      RowBox[{"-", "28"}], 
+      RowBox[{"-", "91"}], "0", "88", 
+      RowBox[{"-", "54"}], "73", "99", "14", 
+      RowBox[{"-", "48"}]},
+     {"207", "29", "69", 
+      RowBox[{"-", "19"}], "42", 
+      RowBox[{"-", "22"}], "65", "94", "68", "26"},
+     {"640", "69", "48", 
+      RowBox[{"-", "46"}], "70", 
+      RowBox[{"-", "91"}], "93", "31", 
+      RowBox[{"-", "28"}], "79"},
+     {
+      RowBox[{"-", "132"}], 
+      RowBox[{"-", "20"}], "43", "53", "28", 
+      RowBox[{"-", "79"}], "53", 
+      RowBox[{"-", "95"}], "7", "18"},
+     {
+      RowBox[{"-", "854"}], 
+      RowBox[{"-", "23"}], 
+      RowBox[{"-", "1"}], 
+      RowBox[{"-", "31"}], "77", "61", 
+      RowBox[{"-", "32"}], "6", "30", 
+      RowBox[{"-", "99"}]},
+     {
+      RowBox[{"-", "106"}], "14", "62", "34", "26", "87", "43", 
+      RowBox[{"-", "5"}], 
+      RowBox[{"-", "38"}], 
+      RowBox[{"-", "24"}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.850435779080472*^9, {3.850435880102839*^9, 3.850435889559968*^9}, {
+   3.850436101759709*^9, 3.850436120727034*^9}, 3.850436450240829*^9, 
+   3.850436664382427*^9},
+ CellLabel->
+  "Out[145]=",ExpressionUUID->"1755788e-dfb3-49a2-a5c5-a5027dd856ec"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Compute the determinant of the singular matrix in exact integer arithmetic\
+\>", "Subsection",
+ CellChangeTimes->{{3.850436458355403*^9, 
+  3.850436487204103*^9}},ExpressionUUID->"f338f33b-8d2f-4950-b38d-\
+0606f9e63476"],
+
+Cell["\<\
+There is no roundoff in integer computations. The determinant will be exactly \
+zero\
+\>", "Text",
+ CellChangeTimes->{{3.850436522710074*^9, 3.850436530516286*^9}, {
+  3.850436700850507*^9, 
+  3.850436711337675*^9}},ExpressionUUID->"ba9f53c7-a0d4-4b47-9090-\
+a802a67681f5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Det", "[", "A", "]"}]], "Input",
+ CellChangeTimes->{{3.8504357844726048`*^9, 3.850435785792451*^9}},
+ CellLabel->
+  "In[146]:=",ExpressionUUID->"c4d6e7a3-6ffb-4e9a-9979-b873e465e878"],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.850435786221365*^9, 3.850435837233467*^9, {3.85043588010867*^9, 
+   3.850435889582793*^9}, {3.850436103814375*^9, 3.850436122935721*^9}, 
+   3.850436670667409*^9},
+ CellLabel->
+  "Out[146]=",ExpressionUUID->"d10e4b01-2e60-43a4-b2cb-92af40387289"]
+}, Open  ]],
+
+Cell["\<\
+This is an integer zero, not a floating point approximation to zero. \
+\>", "Text",
+ CellChangeTimes->{{3.850436544766683*^9, 
+  3.8504365661902027`*^9}},ExpressionUUID->"b402adac-fb03-44f4-ae23-\
+beb4d601ba36"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Head", "[", 
+  RowBox[{"Det", "[", "A", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.850436534877782*^9, 3.8504365397339573`*^9}},
+ CellLabel->
+  "In[147]:=",ExpressionUUID->"2ca2469f-4af0-499f-b449-7baefba5f5a3"],
+
+Cell[BoxData[
+ FormBox["Integer", TraditionalForm]], "Output",
+ CellChangeTimes->{3.85043654013216*^9, 3.8504366723305683`*^9},
+ CellLabel->
+  "Out[147]=",ExpressionUUID->"b1fe81e6-b029-4acb-9521-44819de3ad54"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Now compute the determinant of the singular matrix, but using floating point \
+arithmetic\
+\>", "Subsection",
+ CellChangeTimes->{{3.8504366895383883`*^9, 3.85043669683243*^9}, {
+  3.8504367451778316`*^9, 
+  3.850436757915312*^9}},ExpressionUUID->"26c01525-4083-4ba7-9c9c-\
+f6bac07e2cbc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Det", "[", 
+  RowBox[{"N", "[", "A", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8504341693493643`*^9, 3.850434173723446*^9}, {
+  3.850434461099695*^9, 3.850434461395042*^9}, {3.85043467062473*^9, 
+  3.850434675208144*^9}, {3.8504350639236107`*^9, 3.8504350994838867`*^9}},
+ CellLabel->
+  "In[148]:=",ExpressionUUID->"587d55fd-a10d-416c-b09c-c7fc6fa0d08b"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"-", "34205.75303553672`"}], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.850434174158538*^9, {3.850434462357115*^9, 3.850434468758027*^9}, {
+   3.850434541385017*^9, 3.850434558617812*^9}, {3.850434628851755*^9, 
+   3.8504346757558203`*^9}, {3.850435030309657*^9, 3.850435119880795*^9}, {
+   3.850435682658773*^9, 3.850435703144238*^9}, 3.850435788274337*^9, 
+   3.850435844641889*^9, {3.850435880131074*^9, 3.850435889588269*^9}, {
+   3.850436105897705*^9, 3.850436124947524*^9}, 3.850436674659521*^9},
+ CellLabel->
+  "Out[148]=",ExpressionUUID->"e806983a-1fcb-4fe7-8359-30043a299257"]
+}, Open  ]],
+
+Cell["\<\
+The determinant isn\[CloseCurlyQuote]t small. If you use a numerical \
+determinant to decide singularity, you\[CloseCurlyQuote]d wrongly conclude \
+this matrix is nonsingular!\
+\>", "Text",
+ CellChangeTimes->{{3.850436761027293*^9, 
+  3.850436851021302*^9}},ExpressionUUID->"f98b65a1-d4b7-4d8d-ab72-\
+0c7e4cbffa02"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["Never use a floating point determinant calculation to \
+decide whether a matrix is singular!",
+ FontColor->RGBColor[1, 0, 0]]], "Subtitle",
+ CellChangeTimes->{{3.8504368073722477`*^9, 3.8504368175407*^9}, {
+  3.850436864421588*^9, 
+  3.850436900918935*^9}},ExpressionUUID->"fcd90632-ed7b-4046-a8d7-\
+e4b315cd3fae"]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{133, Automatic}, {Automatic, 8}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->FrontEnd`FileName[{$RootDirectory, "Users", "katharine", 
+   "Library", "Mathematica", "SystemFiles", "FrontEnd", "StyleSheets"}, 
+  "KatharineDefault.nb", CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"8d2dd5de-20bd-4968-95a6-7a7b972471d4"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 195, 3, 172, "Title",ExpressionUUID->"81d5e994-31a1-45e8-9a52-0389ef102cb3"],
+Cell[778, 27, 181, 3, 41, "Author",ExpressionUUID->"148bc70e-f0c2-46ce-afc7-990d7f7f4aa7"],
+Cell[CellGroupData[{
+Cell[984, 34, 186, 3, 65, "Subsection",ExpressionUUID->"a87c0a8c-b02c-4075-a730-68bcce625049"],
+Cell[CellGroupData[{
+Cell[1195, 41, 544, 13, 37, "Input",ExpressionUUID->"ed0570a1-9ee6-4641-8322-8f3b560293c1"],
+Cell[1742, 56, 2481, 76, 243, "Output",ExpressionUUID->"de096df8-aba5-4545-8ce7-63c9821a7993"]
+}, Open  ]],
+Cell[4238, 135, 457, 9, 102, "Text",ExpressionUUID->"7dda1ec6-ddd3-4551-a234-5b44777f29f7"],
+Cell[CellGroupData[{
+Cell[4720, 148, 207, 4, 37, "Input",ExpressionUUID->"76077223-3df9-427e-aca8-e1c211d2d2e2"],
+Cell[4930, 154, 372, 6, 38, "Output",ExpressionUUID->"02d4b7cf-d269-4ebe-b3bd-df6e8923bd69"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5351, 166, 409, 8, 97, "Subsection",ExpressionUUID->"118f9160-cb90-4a7e-8eed-9323462d5513"],
+Cell[5763, 176, 198, 3, 44, "Text",ExpressionUUID->"bd9c26ac-6806-4835-9b9c-8b4c97f07e7f"],
+Cell[CellGroupData[{
+Cell[5986, 183, 757, 22, 64, "Input",ExpressionUUID->"5fa276eb-45ab-451e-86a2-dfb2d0dc0dc4"],
+Cell[6746, 207, 647, 15, 38, "Output",ExpressionUUID->"88a1272e-01fd-43cf-8d15-9e7d627229cd"]
+}, Open  ]],
+Cell[7408, 225, 215, 4, 44, "Text",ExpressionUUID->"9c435700-9fa3-48fa-9f87-7fb32df7574b"],
+Cell[CellGroupData[{
+Cell[7648, 233, 152, 3, 37, "Input",ExpressionUUID->"4db73f43-5626-470a-8c07-c4b96e56862a"],
+Cell[7803, 238, 2435, 76, 245, "Output",ExpressionUUID->"1755788e-dfb3-49a2-a5c5-a5027dd856ec"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10287, 320, 230, 5, 65, "Subsection",ExpressionUUID->"f338f33b-8d2f-4950-b38d-0606f9e63476"],
+Cell[10520, 327, 283, 7, 44, "Text",ExpressionUUID->"ba9f53c7-a0d4-4b47-9090-a802a67681f5"],
+Cell[CellGroupData[{
+Cell[10828, 338, 207, 4, 37, "Input",ExpressionUUID->"c4d6e7a3-6ffb-4e9a-9979-b873e465e878"],
+Cell[11038, 344, 327, 7, 38, "Output",ExpressionUUID->"d10e4b01-2e60-43a4-b2cb-92af40387289"]
+}, Open  ]],
+Cell[11380, 354, 221, 5, 44, "Text",ExpressionUUID->"b402adac-fb03-44f4-ae23-beb4d601ba36"],
+Cell[CellGroupData[{
+Cell[11626, 363, 238, 5, 37, "Input",ExpressionUUID->"2ca2469f-4af0-499f-b449-7baefba5f5a3"],
+Cell[11867, 370, 210, 4, 38, "Output",ExpressionUUID->"b1fe81e6-b029-4acb-9521-44819de3ad54"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12126, 380, 297, 7, 97, "Subsection",ExpressionUUID->"26c01525-4083-4ba7-9c9c-f6bac07e2cbc"],
+Cell[CellGroupData[{
+Cell[12448, 391, 382, 7, 37, "Input",ExpressionUUID->"587d55fd-a10d-416c-b09c-c7fc6fa0d08b"],
+Cell[12833, 400, 629, 11, 38, "Output",ExpressionUUID->"e806983a-1fcb-4fe7-8359-30043a299257"]
+}, Open  ]],
+Cell[13477, 414, 325, 7, 73, "Text",ExpressionUUID->"f98b65a1-d4b7-4d8d-ab72-0c7e4cbffa02"]
+}, Open  ]],
+Cell[13817, 424, 338, 6, 108, "Subtitle",ExpressionUUID->"fcd90632-ed7b-4046-a8d7-e4b315cd3fae"]
+}, Open  ]]
+}
+]
+*)
+

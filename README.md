@@ -9,10 +9,10 @@ Here's a guide to what to look at if you're in one of my courses.
 - **All courses**: 
   - `config`: information on setting up your system
   - `Basics`: getting started with Mathematica
-  - `Vectors`: simple vector operations
+  - `LinearAlgebra`: simple vector operations
   - `Plotting`: simple plotting
 - **MATH 3351** or **MATH 4354** (DE 2)
-  - `Matrices`: matrix operations, systems of equations, eigensystems
+  - `LinearAlgebra`: matrix operations, systems of equations, eigensystems
   - `FourierSeries`: Fourier series & generalizations
   - `PDE`: separable partial differential equations
   - `FourierTransforms`: Fourier transforms and applications
@@ -20,7 +20,7 @@ Here's a guide to what to look at if you're in one of my courses.
   - `Coordinates`: coordinate systems and vectors in those systems
   - `Integration`: integrals in coordinate systems
   - `ODE`: basic ODEs
-  - `Matrices`: matrix operations, systems of equations, eigensystems
+  - `LinearAlgebra`: matrix operations, systems of equations, eigensystems
   - `PowerSeries`: Taylor series, binomial series
   - `FourierSeries`: Fourier series & generalizations
   - `VectorCalc`: vector calculus in coordinate systems

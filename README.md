@@ -22,7 +22,7 @@ Here's a guide to what to look at if you're in one of my courses.
   - `PDE`: separable partial differential equations
   - `FourierTransforms`: Fourier transforms and applications
 - **PHYS/MATH 4325** (Math Methods 1)
-  - `Coordinates`: coordinate systems and vectors in those systems
+  - [Coordinates](https://github.com/krlong014/MathematicaNotes/tree/main/Coordinates): coordinate systems and vectors in those systems
   - `Integration`: integrals in coordinate systems
   - `ODE`: basic ODEs
   - `LinearAlgebra`: matrix operations, systems of equations, eigensystems
